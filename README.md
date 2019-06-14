@@ -18,7 +18,7 @@ SEED Storefront using ES5 Syntax
 * Must make at least one ajax request
 
 
-# #How to Run This App (in the dev environment)
+## How to Run This App (in the dev environment)
 
 1. Set up a the MySQL Database as per schema.sql
 2. Run `npm install` to install requirements (see package.json)
