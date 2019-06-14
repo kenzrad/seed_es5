@@ -1,24 +1,24 @@
 # seed_es5
 SEED Storefront using ES5 Syntax
 
-##Business requirements:
+## Business requirements:
 
-1. Build a product detail page
-2. Must display product information and at least one image
-3. Must display an original price and sale price
-4. Must show current availability
-5. Must have an add to cart function with an indication that item is added to your cart
-6. Must have a recommendation for similar products
-
-
-##Technical requirements:
-
-1. Must use jQuery or ES5 for all DOM manipulation
-2. Must be responsive
-3. Must make at least one ajax request
+* Build a product detail page
+* Must display product information and at least one image
+* Must display an original price and sale price
+* Must show current availability
+* Must have an add to cart function with an indication that item is added to your cart
+* Must have a recommendation for similar products
 
 
-##How to Run This App (in the dev environment)
+## Technical requirements:
+
+* Must use jQuery or ES5 for all DOM manipulation
+*  Must be responsive
+* Must make at least one ajax request
+
+
+# #How to Run This App (in the dev environment)
 
 1. Set up a the MySQL Database as per schema.sql
 2. Run `npm install` to install requirements (see package.json)
