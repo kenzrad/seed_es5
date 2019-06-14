@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>S E E D</title>
+
+    <!--ICO-->
+
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    
+    <!--Scripts-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" defer></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" defer></script>
+    <script src="/js/index.js" defer></script>
+    <script src="/js/sales.js" defer></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-fluid navbar-light bg-light fixed-top">
+    <a class="navbar-brand header text-center front-z">Seed Supply Co.</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse front-z" id="navbarNav">
+        <ul class="navbar-nav nav-links">
+            <li id="gardens-li" class="nav-item front-z">
+                <a class="nav-link" href="#">Gardens</a>
+            </li>
+            <li id="new-li" class="nav-item front-z">
+                <a class="nav-link" href="#">New</a>
+            </li>
+            <li id="sale-li" class="nav-item front-z">
+                <a class="nav-link" href="#">Sale</a>
+            </li>
+        </ul>
+    </div>
+    <div id="icons" class="d-flex ml-auto mr-5 front-z">
+        <a id="shopping-cart" class="btn btn-default btn-xs">
+            <i class="fas fa-shopping-bag mx-1 fa-1.75x ctrl-btn front-z"> </i>
+        </a>
+    </div>
+</nav>
+<br />
+<br />
+
+<div class="container mt-5">
+    <div class="card" style="width: 18rem;">
+        <a id="favorite" class="btn btn-default btn-xs">
+            <i class="fas fa-shopping-bag mx-1 fa-2x front-z"> </i>
+        </a>
+        <div  class="card-img-top carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/defaultSeed.jpg" class="d-block w-100" alt="default-seed">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/sunflowerPlant.jpg" class="d-block w-100" alt="default-plant">
+                </div>
+            </div>
+        </div>
+        <div class = "card-body">
+            <h5 class="card-title">Example</h5>
+            <h6 class="card-subtitle mb-2 text-muted">$2.99</h6>
+            <div id="icons" class="d-flex ml-auto mr-5 front-z">
+                <a id="favorite" class="btn btn-default btn-xs">
+                    <i class="fas fa-shopping-bag mx-1 fa-2x front-z"> </i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+</div>
+    
+</body>
+</html>
