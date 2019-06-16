@@ -1,3 +1,85 @@
-#seed-carousel {
-    width: 500px;
+#inventory-view {
+    margin: 100px 20px 0 20px
 }
+
+/* elements */
+
+nav {
+    height: 120px;
+}
+
+
+/* class */
+
+.card {
+    width: 18rem;
+}
+
+.card-columns {
+    column-count: 3;
+}
+
+.cart-overlay {
+    opacity: 0;
+    transition: .75s;
+}
+
+.cart-overlay:hover {
+    opacity: 1
+}
+
+.icons {
+    color: grey
+}
+
+.onsale {
+    color: grey;
+    font-family: garamond;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    text-decoration: line-through;
+}
+
+.price {
+    color: grey;
+    font-family: garamond;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+}
+
+.product {
+    color: grey;
+    font-family: garamond;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+}
+
+.saleprice {
+    color: coral;
+    font-family: garamond;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+}
+
+
+
+@media only screen and (max-width: 960px) {
+    .card-columns {
+        column-count: 2
+    }
+} 
+
+@media only screen and (max-width: 750px) {
+    .card-columns {
+        column-count: 1
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    #inventory-view {
+        margin: 70px 0 0 0;
+    }
+} 
+

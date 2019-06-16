@@ -1,1 +1,8 @@
-name,price,salePercent,onSale,seedPicture,plantPicture,GroupIdMarigold,6.99,0.25,0,marigoldSeed.jpg,marigoldPlant.jpg,1Sunflower,4.99,0.25,1,sunflowerSeed.jpg,sunflowerPlant.jpg,1Gerbera,19.99,0.5,0,gerberaSeed.jpg,gerberaPlant.jpg,1Sungold Tomato,6.99,0.25,1,sungoldSeed.jpg,sungoldPlant.jpg,2White Eggplant,7.29,0.3,0,eggplantSeed.jpg,eggplantPlant.jpg,2Blackberry,4.99,0.25,0,blackberrySeed.jpg,blackBerryPlant.jpg,3Honey Crisp Apple,8.99,0.3,1,honeyCrispSeed.jpg,honeyCrispPlant.jpg,3
+name,price,salePercent,onSale,seedPicture,plantPicture,category
+Marigold,6.99,0.25,0,marigoldSeed.jpg,marigoldPlant.jpg,Flower
+Sunflower,4.99,0.25,1,sunflowerSeed.jpg,sunflowerPlant.jpg,Flower
+Gerbera,19.99,0.5,0,gerberaSeed.jpg,gerberaPlant.jpg,Flower
+Sungold Tomato,6.99,0.25,1,sungoldSeed.jpg,sungoldPlant.jpg,Vegetable
+White Eggplant,7.29,0.3,0,eggplantSeed.jpg,eggplantPlant.jpg,Vegetable
+Blackberry,4.99,0.25,0,blackberrySeed.jpg,blackBerryPlant.jpg,Fruit
+Honey Crisp Apple,8.99,0.3,1,honeyCrispSeed.jpg,honeyCrispPlant.jpg,Fruit

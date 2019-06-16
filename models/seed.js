@@ -29,16 +29,13 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       defaultValue: "img/defaultPlant.jpg"
+    },
+    category: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: "misc"
     }
   });
-  
-  Seed.associate = function(models) {
-    Seed.belongsTo(models.Group, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  };
   
   return Seed;
   };

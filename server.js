@@ -12,11 +12,11 @@ app.use(express.static("public"));
 
 // routes
 require("./routes/html-routes.js")(app);
-require("./routes/group-api-routes.js")(app);
 require("./routes/seed-api-routes.js")(app);
 
 // sync models and start express
-db.sequelize.sync({ force: true }).then(function() {
+//edit to "sync( { force: true} )..." to drop the tables upon initiliazation
+db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
