@@ -59,16 +59,6 @@ $(document).ready(function() {
         '-img2">'
       ];
 
-      // var imgTwo = $("<img>")
-      //   .addClass("d-block w-100")
-      //   .attr('src', 'img/' + products[i].plantPicture)
-      //   .attr('alt', products[i].name)
-      // ;
-      // console.log(products[i].id);
-      // console.log(products[i].seedPicture);
-      // console.log(imgOne);
-
-
       createCard(imgOne.join(''), imgTwo.join(''), id, productDisplay, priceDisplay);
     }
       
@@ -112,74 +102,4 @@ $(document).ready(function() {
   }
 
 });
-
-// var cards = $();
-// // Store all the card nodes
-// data.forEach(function(item, i) {
-//   cards = cards.add(createCard(item));
-// });
-
-// Add them to the page... for instance the <body>
-// $(function() {
-//   $('body').append(cards);
-// });
-
-// function createProductCards(products) {
-//   console.log("creating product cards")
-
-//   var card = $("<div>")
-//     .addClass("card")
-//   ;
-
-//   var carousel = $("<div>")
-//     .addClass("card-img-top carousel slide")
-//     .attr("data-ride", "carousel")
-//   ;
- 
-//   for (i=0; i < products.length; i++) {
-//     var carouselInner = $("<div>")
-//       .addClass("carousel-inner")
-//     ;
-
-//     carouselInner.append($("<div>").addClass("carousel-item"))
-
-//     var imgOne = $("<img>")
-//       .addClass("d-block w-100")
-//       .attr("src", products[i].seedPicture)
-//       .attr("alt", products[i].name)
-//     ;
-//     var carouselOne = carouselInner
-//       .addClass("active")
-//       .append(imgOne)
-//     ;
-
-//     var imgTwo = $("<img>")
-//       .addClass("d-block w-100")
-//       .attr("src", products[i].plantPicture)
-//       .attr("alt", products[i].name)
-//     ;
-//     var carouselTwo = carouselInner
-//       .append(imgTwo)
-//     ;
-
-//     carousel.append(carouselInner, "</div>");
-//     card.append(carousel, "</div>");
-
-//     console.log(JSON.stringify(card));
-//   }
-
-//   <div class = "card-body d-flex py-0 px-3">
-//       <h6 class="price card-title mr-auto my-2">$2.99</h6>
-//       <div id="icons" class="ml-auto">
-//           <a id="add-to-cart" class="price btn btn-default btn-xs p-0 my-1">
-//               <i class="shopping-bag fas fa-shopping-bag mx-1 fa-2x front-z my-0 py-0"> </i>
-//           </a>
-//       </div>
-//   </div>
-// </div>
-// }
-
-// function displayProductCards(productCards) {
-//   console.log("displaying product cards in: " + cardDiv)
-// }
 

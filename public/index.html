@@ -21,6 +21,7 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" defer></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" defer></script>
     <script src="/js/index.js" defer></script>
+    <script src="/js/cart.js" defer></script>
     <!-- <script src="/js/sales.js" defer></script> -->
 
 </head>
@@ -47,7 +48,7 @@
         <div class="d-flex ml-auto mr-5 front-z">
             <ul class="navbar-nav nav-links">
                 <li id="sale-li" class="nav-item front-z">
-                    <a class="nav-link" href="#">
+                    <a id="cartLink" class="nav-link" href="#">
                     <i class="icons fas fa-seedling mx-1 fa-1x front-z my-0 py-0"> </i>
                     Cart</a>
                 </li>
@@ -58,6 +59,25 @@
 
     <div id="inventory-view" class="card-columns"></div>
     
+    <div id="cartModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="seed modal-title">Your Cart</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div id="cartItems" class="modal-body"></div>
+            <div class="modal-footer">
+              <button type="button" class="seed btn btn-outline-secondary">Check Out</button>
+              <button type="button" class="seed btn btn-outline-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
 </body>
 
 </html>

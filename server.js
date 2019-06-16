@@ -13,6 +13,7 @@ app.use(express.static("public"));
 // routes
 require("./routes/html-routes.js")(app);
 require("./routes/seed-api-routes.js")(app);
+require("./routes/cart-api-routes.js")(app);
 
 // sync models and start express
 //edit to "sync( { force: true} )..." to drop the tables upon initiliazation

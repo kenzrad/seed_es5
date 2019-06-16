@@ -61,6 +61,13 @@ nav {
     letter-spacing: 0.1em;
 }
 
+.seed {
+    color: grey;
+    font-family: garamond;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+}
+
 
 
 @media only screen and (max-width: 960px) {

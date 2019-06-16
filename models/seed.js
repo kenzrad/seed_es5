@@ -36,6 +36,12 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: "misc"
     }
   });
+
+  Seed.associate = function(models) {
+    Seed.hasOne(models.Cart, {
+      onDelete: 'cascade'
+    });
+  };
   
   return Seed;
   };
