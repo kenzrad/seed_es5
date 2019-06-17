@@ -5,7 +5,7 @@ module.exports = function(app) {
   //GET route for getting all the cart info
   app.get("/api/cart", function(req, res) {
     db.Cart.findAll({
-      include: [db.Cart],
+      include: [db.Seed],
     }).then(function(dbCart) {
       console.log(JSON.stringify(dbCart));
       res.json(dbCart);

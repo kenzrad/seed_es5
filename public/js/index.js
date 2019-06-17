@@ -68,7 +68,7 @@ $(document).ready(function() {
   
   function createCard(imgOne, imgTwo, id, product, price) {
     var cardTemplate = [
-      '<div id="',
+      '<div id="card-',
       id,
       '" class="card my-5">',
       '<div class="card-img-top carousel slide" data-ride="carousel">',
@@ -82,8 +82,11 @@ $(document).ready(function() {
       '</div>',
       '</div>',
       '<div class="cart-overlay card-img-overlay d-flex">',
-      '<a id="add-to-cart" class="ml-auto btn btn-default btn-xs p-0 my-1">',
-      '<i class="icons fas fa-shopping-bag mx-1 fa-2x front-z my-0 py-0"></i>',
+      '<a class="add-to-cart ml-auto btn btn-default btn-xs p-0 my-1" ',
+      'data-id=',
+      id,
+      '>',
+      '<i class="icons fas fa-shopping-bag mx-1 fa-2x my-0 py-0"></i>',
       '</a>',
       '</div>',
       '<div class = "card-body d-flex py-0 px-3">',
