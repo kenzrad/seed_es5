@@ -68,7 +68,20 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div id="cartItems" class="modal-body"></div>
+            <div class="modal-body">
+                <table class="table"> 
+                    <thead>
+                        <tr>
+                        <th scope="col"><i class="icons fas fa-seedling"></i></th>
+                        <th scope="col">Product</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Total Price</th>
+                        </tr>
+                    </thead>
+                <tbody id="cartItems">
+                </tbody>
+                </table>   
+            </div>
             <div class="modal-footer">
               <button type="button" class="seed btn btn-outline-secondary">Check Out</button>
               <button type="button" class="seed btn btn-outline-secondary" data-dismiss="modal">Close</button>
@@ -77,6 +90,21 @@
         </div>
     </div>
 
+    <div id="emptyCart" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="seed modal-title">Your Cart is Empty!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="seed btn btn-outline-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
 
 </body>
 
