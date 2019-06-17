@@ -27,6 +27,7 @@ $(document).ready(function() {
       var priceDisplay;
       var inventory = products[i].inventory;
       var overlay;
+      var category = product[i].category;
 
       var productDisplay = '<h5 class="product card-title mr-auto my-2">' + product + '</h5>';
 
@@ -78,17 +79,19 @@ $(document).ready(function() {
         priceDisplay ='<h6 class="price card-text ml-auto my-2">Out of Stock</h6>';
       }
 
-      createCard(imgOne.join(''), imgTwo.join(''), overlay, id, productDisplay, priceDisplay);
+      createCard(imgOne.join(''), imgTwo.join(''), overlay, id, productDisplay, priceDisplay, category);
     }
       
     displayProductCards(cards.join(''));
 
   };
   
-  function createCard(imgOne, imgTwo, overlay, id, product, price) {
+  function createCard(imgOne, imgTwo, overlay, id, product, price, category) {
     var cardTemplate = [
-      '<div id="card-',
+      '<div data-id="',
         id,
+        '" data-category="',
+        category,
         '" class="card my-5">',
         '<div class="card-img-top carousel slide" data-ride="carousel">',
           '<div class="carousel-inner">',

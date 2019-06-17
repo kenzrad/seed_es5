@@ -12,6 +12,20 @@ module.exports = function(app) {
     });
   });
 
+  //GET route for getting all the cart info
+  app.get("/api/cart/:category/:id", function(req, res) {
+    db.Cart.findAll({
+      where: {
+        category: req.params.category,
+        id: {$not: req.params.id }
+      },
+      include: [db.Seed]
+    }).then(function(dbCart) {
+      console.log(JSON.stringify(dbCart));
+      res.json(dbCart);
+    });
+  });
+
   // POST route for saving a new item to shopping cart
   app.post("/api/cart", function(req, res) {
     db.Cart.create(req.body).then(function(dbCart) {

@@ -25,10 +25,7 @@ $(document).ready(function() {
     $('#cartLink').on('click', function(e) {
         console.log("clicked!")
         e.preventDefault();
-        getCart();
-        
-
-        
+        getCart();  
     });
 
 
@@ -63,6 +60,8 @@ $(document).ready(function() {
             var onSale = items[i].Seed.onSale;
             var picture = items[i].Seed.plantPicture;
             var quantity = items[i].quantity;
+            var category = items[i].Seed.category;
+            var inventory = items[i].Seed.inventory;
 
             var row = [
                 '<tr>',
@@ -87,6 +86,7 @@ $(document).ready(function() {
         };
 
         displayTable(rows.join(''));
+        getSuggestions(category, id);
 
     };
 
