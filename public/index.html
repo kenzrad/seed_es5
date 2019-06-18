@@ -28,69 +28,71 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-fluid navbar-light bg-light fixed-top">
-        <a class="navbar-brand header text-center front-z" class="front-z">Seed Supply Co.</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse front-z" id="navbarNav">
-            <ul class="navbar-nav nav-links">
-                <li id="gardens-li" class="nav-item front-z">
-                    <a class="nav-link" href="#">Gardens</a>
-                </li>
-                <li id="new-li" class="nav-item front-z">
-                    <a class="nav-link" href="#">New</a>
-                </li>
-                <li id="sale-li" class="nav-item front-z">
-                    <a class="nav-link" href="#">Sale</a>
-                </li>
-            </ul>
-        </div>
-        <div class="d-flex ml-auto mr-5 front-z">
-            <ul class="navbar-nav nav-links">
-                <li id="sale-li" class="nav-item front-z">
-                    <a id="cartLink" class="nav-link" href="#">
-                    <i class="icons fas fa-seedling mx-1 fa-1x front-z my-0 py-0"> </i>
-                    Cart</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-
-    <div id="inventory-view" class="card-columns"></div>
-    
-    <div id="cartModal" class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="seed modal-title">Your Cart</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                <table class="table"> 
-                    <thead>
-                        <tr class="text-center">
-                        <th scope="col"><i class="icons fas fa-seedling"></i></th>
-                        <th scope="col">Product</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Total Price</th>
-                        <th scope="col"></th>
-                        </tr>
-                    </thead>
-                <tbody id="cartItems">
-                </tbody>
-                </table>   
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="seed btn btn-outline-secondary">Check Out</button>
-              <button type="button" class="seed btn btn-outline-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
+  <nav class="navbar navbar-expand-lg navbar-fluid navbar-light bg-light fixed-top">
+    <a class="navbar-brand header text-center front-z" class="front-z">Seed Supply Co.</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse front-z" id="navbarNav">
+      <ul class="navbar-nav nav-links">
+        <li id="gardens-li" class="nav-item front-z">
+          <a class="nav-link" href="#">Gardens</a>
+        </li>
+        <li id="new-li" class="nav-item front-z">
+          <a class="nav-link" href="#">New</a>
+        </li>
+        <li id="sale-li" class="nav-item front-z">
+          <a class="nav-link" href="#">Sale</a>
+        </li>
+      </ul>
     </div>
+    <div class="d-flex ml-auto mr-5 front-z">
+      <ul class="navbar-nav nav-links">
+        <li id="sale-li" class="nav-item front-z">
+          <a id="cartLink" class="nav-link" href="#">
+            <i class="icons fas fa-seedling mx-1 fa-1x front-z my-0 py-0"> </i>
+            Cart</a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div id="inventory-view" class="card-columns"></div>
+
+  <div id="cartModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="seed modal-title">Your Cart</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="table mb-3 border-bottom"> 
+            <thead>
+              <tr class="text-center">
+                <th scope="col"><i class="icons fas fa-seedling"></i></th>
+                <th scope="col">Product</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total Price</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody id="cartItems">
+            </tbody>
+          </table> 
+          <h5 class="seed modal-title mt-5">You May Also Like</h5>
+          <div id="suggestions-div" class="card-group"></div> 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="seed btn btn-outline-secondary">Check Out</button>
+          <button type="button" class="seed btn btn-outline-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <div id="emptyCart" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
