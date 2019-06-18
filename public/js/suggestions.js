@@ -1,11 +1,25 @@
 function getSuggestions(category, id) {
-  console.log(category);
-  $.get("/api/products/?category=" + category, function(data) {
+  query = "/api/products/?category=" + category
+  $.get(query, function(data) {
     if (!data || !data.length) {
       console.log("No suggestions to display")
     }
     else {
-      console.log(data);
+      filterSuggestions(data, category);
     }
   });
+}
+
+function filterSuggestions(data, category) {
+  var suggestions = [];
+  for( i = 0; i < data.length; i++) {
+    if(data[i].category === category) {
+      suggestions.push(data[i]);
+    }
+  }
+  viewSuggestions(suggestions);
+}
+
+function viewSuggestions(suggestions) {
+  console.log(suggestions);
 }
