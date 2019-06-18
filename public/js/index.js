@@ -1,8 +1,9 @@
-$(document).ready(function() {
+
   var cardDiv = $("#inventory-view");
   var cards = [];
 
   getAllProducts();
+
   function getAllProducts() {
     $.get("/api/products", function(data) {
       console.log("products", data);
@@ -27,7 +28,12 @@ $(document).ready(function() {
       var priceDisplay;
       var inventory = products[i].inventory;
       var overlay;
-      var category = product[i].category;
+      var category = products[i].category;
+      var overlayIcon = "check"
+      
+      if (products[i].Cart == null ) {
+        overlayIcon = "shopping-bag"
+      };
 
       var productDisplay = '<h5 class="product card-title mr-auto my-2">' + product + '</h5>';
 
@@ -57,15 +63,15 @@ $(document).ready(function() {
         overlay = [
           '<div class="cart-overlay card-img-overlay d-flex">',
           '<a class="add-to-cart ml-auto btn btn-default btn-xs p-0 my-1" data-id="',
-            id,
-            '" data-cart="false">',
-            '<i class="icons fas fa-shopping-bag mx-1 fa-2x my-0 py-0"></i>',
+          id,
+          '" data-cart="false">',
+          '<i class="icons fas fa-',
+          overlayIcon,
+          ' mx-1 fa-2x my-0 py-0"></i>',
           '</a>',
           '</div>'
         ];
-
-        overlay.join('')
-
+        
         if(onSale) {
           priceDisplay = '<h6 class="saleprice card-text ml-auto mx-0 my-2">$' + salePrice + '</h6> <h6 class="onsale card-text ml-1 mx-0 my-2">$' + price + '</h6>';
         }
@@ -75,11 +81,11 @@ $(document).ready(function() {
         
       }
       else {
-        overlay = '';
+        overlay = [];
         priceDisplay ='<h6 class="price card-text ml-auto my-2">Out of Stock</h6>';
       }
 
-      createCard(imgOne.join(''), imgTwo.join(''), overlay, id, productDisplay, priceDisplay, category);
+      createCard(imgOne.join(''), imgTwo.join(''), overlay.join(''), id, productDisplay, priceDisplay, category);
     }
       
     displayProductCards(cards.join(''));
@@ -118,6 +124,3 @@ $(document).ready(function() {
   function displayProductCards(cards) {
     cardDiv.append(cards);
   }
-
-});
-
