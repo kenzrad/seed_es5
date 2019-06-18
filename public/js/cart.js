@@ -30,12 +30,6 @@ $('#cartLink').on('click', function(e) {
     getCart();  
 });
 
-
-
-
-
-
-
 function getCart() {
     $("#cartItems").empty();
     $.get("/api/cart", function(cartItems) {
@@ -64,15 +58,14 @@ function makeCartTable(items) {
         var quantity = items[i].quantity;
         var category = items[i].Seed.category;
         var inventory = items[i].Seed.inventory;
-        
-        console.log(category);
+
         var row = [
             '<tr class="text-center" data-id="',
             id,
             '">',
             '<th scope="row">',
                 '<img class="img-thumbnail" src="img/',
-                'defaultPlant.jpg',
+                picture,
                 '">',
             '</th>',
             '<td>',

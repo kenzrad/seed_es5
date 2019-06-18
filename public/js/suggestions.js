@@ -1,4 +1,5 @@
 function getSuggestions(category, id) {
+  $("#suggestions-div").empty();
   query = "/api/products/?category=" + category
   $.get(query, function(data) {
     if (!data || !data.length) {
@@ -17,7 +18,20 @@ function filterSuggestions(data, category) {
       suggestions.push(data[i]);
     }
   }
-  suggestionVariables(suggestions);
+  shuffleSuggestions(suggestions);
+}
+
+//randomizing the suggestions array and slicing it so it gives a max of 4 suggestions
+function shuffleSuggestions(arr) {
+    var j, x, i;
+    for (i = arr.length - 1; i > 0; i--) {
+      j = Math.floor(Math.random() * (i + 1));
+      x = arr[i];
+      arr[i] = arr[j];
+      arr[j] = x;
+    }
+    var suggestions = arr.slice(0,3);
+    suggestionVariables(suggestions);
 }
 
 function suggestionVariables(products) {
@@ -32,6 +46,7 @@ function suggestionVariables(products) {
     var overlayIcon = "check"
     var inventory = products[i].inventory;
     var category = products[i].category;
+    var plantImage = products[i].plantPicture;
     
     if (products[i].Cart == null ) {
       overlayIcon = "shopping-bag"
@@ -43,7 +58,7 @@ function suggestionVariables(products) {
       '<img ',
       'class = "d-block w-100"',
       'src = "img/',
-      'defaultPlant.jpg',
+      plantImage,
       '"',
       'alt = "',
       name,
@@ -103,7 +118,7 @@ function createSuggestionCards(img, overlay, id, product, price, category) {
   ];
     
   suggestions.push(cards.join(''));
-  displaySuggestionCards(suggestions)
+  displaySuggestionCards(suggestions);
   
 };
 
