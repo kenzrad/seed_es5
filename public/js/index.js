@@ -114,5 +114,8 @@ function createCardVariables(products) {
 
 function displayProductCards(cards) {
   cardDiv.append(cards);
+  $('.carousel').carousel({
+    interval: 2000
+  })
 }
 
